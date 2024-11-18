@@ -85,10 +85,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &mt EXCLAMATION Q  &mt AT_SIGN W       &mt HASH D      &mt DOLLAR R    &mt PERCENT F    &mt CARET J  &mt AMPERSAND Y  &mt LEFT_PARENTHESIS U  &mt RIGHT_PARENTHESIS P  &kp QUESTION
-       &mt LEFT_SHIFT A   &mt LEFT_CONTROL S  &mt LEFT_ALT E  &mt LEFT_GUI T  &kp G            &kp H        &mt RIGHT_GUI I  &mt RIGHT_ALT N         &mt RIGHT_CONTROL L      &mt RIGHT_SHIFT O
-&kp Q  &mt K_UNDO Z       &mt K_CUT X         &mt K_COPY C    &mt K_PASTE V   &kp COMMA        &kp PERIOD   &kp B            &kp M                   &kp K                    &kp SEMICOLON      &kp APOSTROPHE
-                                              &mt ESCAPE TAB  &lt NAV SPACE   &to 2            &kp RET      &lt SYM ESC      &lt 3 DELETE
+                   &mt EXCLAMATION Q  &mt AT_SIGN W       &mt HASH D      &mt DOLLAR R    &mt PERCENT F                 &mt CARET J                   &mt AMPERSAND Y  &mt C_VOLUME_DOWN U  &mt C_VOLUME_UP P    &mt MINUS QUESTION
+                   &mt LEFT_SHIFT A   &mt LEFT_CONTROL S  &mt LEFT_ALT E  &mt LEFT_GUI T  &mt LEFT_BRACKET G            &mt RIGHT_BRACKET H           &mt RIGHT_GUI I  &mt RIGHT_ALT N      &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT O
+&mt EXCLAMATION Q  &mt LG(Z) Z        &mt LG(X) X         &mt LG(C) C     &mt LG(V) V     &mt LEFT_PARENTHESIS COMMA    &mt RIGHT_PARENTHESIS PERIOD  &mt PAGE_UP B    &mt C_PLAY_PAUSE M   &mt PAGE_DOWN K      &kp SEMICOLON       &mt NON_US_BACKSLASH APOSTROPHE
+                                                          &mt ESCAPE TAB  &lt NAV SPACE   &tog 1                        &mt DEL RET                   &lt 1 SPACE      &lt 3 BACKSPACE
             >;
         };
 
@@ -111,10 +111,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-             &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-             &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&bootloader  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                                    &trans    &trans     &trans      &mo ADJ   &kp KP_N0  &trans
+             &mt TILDE F2        &mt A NUMBER_9      &mt A NUMBER_8         &kp N7                 &mt LBRC F4       &mt RBRC F9                 &kp SLASH                     &kp UP_ARROW                &kp MINUS                      &kp PLUS
+             &mt LSHFT NUMBER_0  &mt LCTRL NUMBER_6  &mt LEFT_ALT NUMBER_5  &mt LEFT_GUI NUMBER_4  &kp LBKT          &mt RIGHT_BRACKET ASTERISK  &mt RIGHT_GUI LEFT_ARROW      &mt RIGHT_ALT DOWN_ARROW    &mt RIGHT_CONTROL RIGHT_ARROW  &kp EQUAL
+&bootloader  &mt LG(Z) A         &mt LG(X) NUMBER_3  &mt LG(C) NUMBER_2     &mt LG(V) NUMBER_1     &mt LPAR COMMA    &mt RPAR PERIOD             &mt PAGE_UP C_BRIGHTNESS_DEC  &mt KP_N2 C_BRIGHTNESS_INC  &mt PAGE_DOWN C_PREVIOUS       &mt KP_MULTIPLY C_NEXT  &bootloader
+                                                     &trans                 &trans                 &trans            &trans                      &trans                        &trans
             >;
         };
 
