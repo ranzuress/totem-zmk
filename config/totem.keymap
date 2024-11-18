@@ -117,10 +117,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-             &mt TILDE F2        &mt A NUMBER_9      &mt A NUMBER_8         &kp N7                 &mt LBRC F4       &mt RBRC F9                 &kp SLASH                     &mt CARET UP_ARROW          &kp MINUS                      &kp PLUS
-             &mt LSHFT NUMBER_0  &mt LCTRL NUMBER_6  &mt LEFT_ALT NUMBER_5  &mt LEFT_GUI NUMBER_4  &kp LBKT          &mt RIGHT_BRACKET ASTERISK  &mt RIGHT_GUI LEFT_ARROW      &mt RIGHT_ALT DOWN_ARROW    &mt RIGHT_CONTROL RIGHT_ARROW  &mt RIGHT_SHIFT EQUAL
-&bootloader  &mt LG(Z) A         &mt LG(X) NUMBER_3  &mt LG(C) NUMBER_2     &mt LG(V) NUMBER_1     &mt LPAR COMMA    &mt RPAR PERIOD             &mt PAGE_UP C_BRIGHTNESS_DEC  &mt KP_N2 C_BRIGHTNESS_INC  &mt PAGE_DOWN C_PREVIOUS       &mt KP_MULTIPLY C_NEXT  &bootloader
-                                                     &trans                 &trans                 &trans            &trans                      &trans                        &trans
+             &mt TILDE F2        &mt A NUMBER_9      &mt A NUMBER_8         &kp N7                 &mt LBRC F4                     &mt RBRC F9                 &kp SLASH                     &mt CARET UP_ARROW          &kp MINUS                      &kp PLUS
+             &mt LSHFT NUMBER_0  &mt LCTRL NUMBER_6  &mt LEFT_ALT NUMBER_5  &mt LEFT_GUI NUMBER_4  &mt LEFT_BRACKET PRINTSCREEN    &mt RIGHT_BRACKET ASTERISK  &mt RIGHT_GUI LEFT_ARROW      &mt RIGHT_ALT DOWN_ARROW    &mt RIGHT_CONTROL RIGHT_ARROW  &mt RIGHT_SHIFT EQUAL
+&bootloader  &mt LG(Z) A         &mt LG(X) NUMBER_3  &mt LG(C) NUMBER_2     &mt LG(V) NUMBER_1     &mt LPAR COMMA                  &mt RPAR PERIOD             &mt PAGE_UP C_BRIGHTNESS_DEC  &mt KP_N2 C_BRIGHTNESS_INC  &mt PAGE_DOWN C_PREVIOUS       &mt KP_MULTIPLY C_NEXT  &bootloader
+                                                     &trans                 &trans                 &trans                          &trans                      &trans                        &trans
             >;
         };
 
