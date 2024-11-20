@@ -45,24 +45,54 @@
             bindings = <&tog 3>;
         };
 
-        shift+option+leftarrow {
+        highlight_prev_word {
             bindings = <&shift_option_leftarrow>;
-            key-positions = <16 10 12>;
+            key-positions = <16 19>;
         };
 
-        shift+option+uparrow {
+        highlight_prev_paragraph {
             bindings = <&shift_option_uparrow>;
-            key-positions = <10 12 7>;
+            key-positions = <7 19>;
         };
 
-        option_leftarrow {
+        move_oneword_left {
             bindings = <&option_leftarrow>;
+            key-positions = <16 15>;
+        };
+
+        move_beg_paragraph {
+            bindings = <&option_uparrow>;
+            key-positions = <16 7 18>;
+        };
+
+        bckspc_word {
+            bindings = <&option_backspace>;
+            key-positions = <16 36>;
+        };
+
+        move_end_paragraph {
+            bindings = <&option_downarrow>;
+            key-positions = <17 16 18>;
+        };
+
+        move_oneword_right {
+            bindings = <&option_rightarrow>;
+            key-positions = <18 19>;
+        };
+
+        leftarrow {
+            bindings = <&kp LEFT_ARROW>;
             key-positions = <16 17>;
         };
 
-        option_uparrow {
-            bindings = <&option_uparrow>;
-            key-positions = <16 7>;
+        rightarrow {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <17 18>;
+        };
+
+        del_word {
+            bindings = <&option_delete>;
+            key-positions = <18 36>;
         };
     };
 
@@ -158,6 +188,62 @@
 
             label = "OPTION_UPARROW";
         };
+
+        option_backspace: bckspc_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp BACKSPACE>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "BCKSPC_WORD";
+        };
+
+        option_downarrow: option_downarrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "OPTION_DOWNARROW";
+        };
+
+        option_rightarrow: option_rightarrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "OPTION_RIGHTARROW";
+        };
+
+        option_delete: option_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp DEL>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "OPTION_DELETE";
+        };
     };
 
     keymap {
@@ -182,10 +268,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &mt EXCLAMATION Q  &mt AT_SIGN W       &mt HASH D      &mt DOLLAR R    &mt PERCENT F                 &mt AMPERSAND J               &mt C_VOLUME_DOWN Y  &mt C_VOLUME_UP U   &mt C_NEXT P         &mt MINUS QUESTION
-        &mt LEFT_SHIFT A   &mt LEFT_CONTROL S  &mt LEFT_ALT E  &mt LEFT_GUI T  &mt HOME G                    &mt END H                     &mt RIGHT_GUI I      &mt RIGHT_ALT N     &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT O
+        &mt EXCLAMATION Q  &mt AT_SIGN W       &mt HASH D      &mt DOLLAR R    &mt PERCENT F                 &mt AMPERSAND J               &mt C_VOLUME_DOWN Y  &mt C_VOLUME_UP U   &mt MINUS P          &mt C_NEXT QUESTION
+        &mt LEFT_SHIFT A   &mt LEFT_CONTROL S  &mt LEFT_ALT E  &mt LEFT_GUI T  &mt END G                     &mt HOME H                    &mt RIGHT_GUI I      &mt RIGHT_ALT N     &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT O
 &tog 2  &mt LG(Z) Z        &mt LG(X) X         &mt LG(C) C     &mt LG(V) V     &mt LEFT_PARENTHESIS COMMA    &mt RIGHT_PARENTHESIS PERIOD  &mt PAGE_UP B        &mt C_PLAY_PAUSE M  &mt PAGE_DOWN K      &mt LEFT_BRACKET SEMICOLON  &mt RIGHT_BRACKET APOSTROPHE
-                                               &tog 1          &lt 1 SPACE     &mt ESC TAB                   &mt DEL RET                   &lt 1 BACKSPACE      &lt 2 DELETE
+                                               &tog 1          &lt 1 SPACE     &mt ESC TAB                   &mt RG(RS(NUMBER_5)) RET      &lt 1 BACKSPACE      &lt 2 DELETE
             >;
         };
 
@@ -235,10 +321,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &sys_reset   &bt BT_CLR  &out OUT_TOG  &trans  &trans         &trans      &kp F7             &kp F8  &kp F9  &kp F12
-        &bootloader  &none       &kp A         &trans  &trans         &trans      &icloudmail_macro  &kp F5  &kp F6  &kp F11
-&trans  &sys_reset   &bt BT_PRV  &bt BT_NXT    &trans  &kp C_RESET    &sys_reset  &kp F1             &kp F2  &kp F3  &kp F10  &trans
-                                 &trans        &trans  &trans         &trans      &trans             &trans
+             &trans       &bt BT_CLR   &out OUT_TOG  &trans  &trans         &trans      &kp F7             &kp F8  &kp F9  &kp F12
+             &bootloader  &screenshot  &kp A         &trans  &trans         &trans      &icloudmail_macro  &kp F5  &kp F6  &kp F11
+&bootloader  &sys_reset   &bt BT_PRV   &bt BT_NXT    &trans  &kp C_RESET    &sys_reset  &kp F1             &kp F2  &kp F3  &kp F10  &trans
+                                       &trans        &trans  &trans         &trans      &trans             &trans
             >;
         };
 
