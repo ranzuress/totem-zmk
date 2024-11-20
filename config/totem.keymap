@@ -44,6 +44,26 @@
             key-positions = <11 12 13>;
             bindings = <&tog 3>;
         };
+
+        shift+option+leftarrow {
+            bindings = <&shift_option_leftarrow>;
+            key-positions = <16 10 12>;
+        };
+
+        shift+option+uparrow {
+            bindings = <&shift_option_uparrow>;
+            key-positions = <10 12 7>;
+        };
+
+        option_leftarrow {
+            bindings = <&option_leftarrow>;
+            key-positions = <16 17>;
+        };
+
+        option_uparrow {
+            bindings = <&option_uparrow>;
+            key-positions = <16 7>;
+        };
     };
 
     macros {
@@ -62,10 +82,17 @@
                 <&kp G &kp I &kp F>;
         };
 
-        ss_macro: ss {
+        shift_option_leftarrow: ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp KP_NUMBER_5>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
             label = "SS";
         };
 
@@ -74,6 +101,62 @@
             #binding-cells = <0>;
             bindings = <&kp R &kp U &kp B &kp DOT &kp A &kp N &kp Z &kp S &kp A &kp AT &kp I &kp C &kp L &kp O &kp U &kp D &kp DOT &kp C &kp O &kp M>;
             label = "ICLOUDMAIL_MACRO";
+        };
+
+        shift_option_uparrow: shift_option_uparrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "SHIFT_OPTION_UPARROW";
+        };
+
+        screenshot: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp NUMBER_5>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp LEFT_SHIFT>;
+
+            label = "SCREENSHOT";
+        };
+
+        option_leftarrow: option_leftarrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "OPTION_LEFTARROW";
+        };
+
+        option_uparrow: option_uparrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "OPTION_UPARROW";
         };
     };
 
@@ -101,8 +184,8 @@
             bindings = <
         &mt EXCLAMATION Q  &mt AT_SIGN W       &mt HASH D      &mt DOLLAR R    &mt PERCENT F                 &mt AMPERSAND J               &mt C_VOLUME_DOWN Y  &mt C_VOLUME_UP U   &mt C_NEXT P         &mt MINUS QUESTION
         &mt LEFT_SHIFT A   &mt LEFT_CONTROL S  &mt LEFT_ALT E  &mt LEFT_GUI T  &mt HOME G                    &mt END H                     &mt RIGHT_GUI I      &mt RIGHT_ALT N     &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT O
-&tog 2  &mt LG(Z) Z        &mt LG(X) X         &mt LG(C) C     &mt LG(V) V     &mt LEFT_PARENTHESIS COMMA    &mt RIGHT_PARENTHESIS PERIOD  &mt PAGE_UP B        &mt C_PLAY_PAUSE M  &mt PAGE_DOWN K      &kp SEMICOLON       &mt NON_US_BACKSLASH APOSTROPHE
-                                               &mt ESCAPE TAB  &lt 1 SPACE     &tog 1                        &mt DEL RET                   &lt 1 SPACE          &lt 2 BACKSPACE
+&tog 2  &mt LG(Z) Z        &mt LG(X) X         &mt LG(C) C     &mt LG(V) V     &mt LEFT_PARENTHESIS COMMA    &mt RIGHT_PARENTHESIS PERIOD  &mt PAGE_UP B        &mt C_PLAY_PAUSE M  &mt PAGE_DOWN K      &mt LEFT_BRACKET SEMICOLON  &mt RIGHT_BRACKET APOSTROPHE
+                                               &tog 1          &lt 1 SPACE     &mt ESC TAB                   &mt DEL RET                   &lt 1 BACKSPACE      &lt 2 DELETE
             >;
         };
 
