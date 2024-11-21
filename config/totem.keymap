@@ -62,7 +62,7 @@
 
         move_beg_paragraph {
             bindings = <&option_uparrow>;
-            key-positions = <16 7 18>;
+            key-positions = <27 28>;
         };
 
         bckspc_word {
@@ -72,7 +72,7 @@
 
         move_end_paragraph {
             bindings = <&option_downarrow>;
-            key-positions = <17 16 18>;
+            key-positions = <28 29>;
         };
 
         move_oneword_right {
@@ -91,13 +91,18 @@
         };
 
         del_word {
-            bindings = <&option_delete>;
+            bindings = <&option_bckspc>;
             key-positions = <18 36>;
         };
 
         highlight_end_paragraph {
             bindings = <&shift_option_downarrow>;
-            key-positions = <16 17 18 36>;
+            key-positions = <28 29 19>;
+        };
+
+        highlight_whole_paragraph {
+            bindings = <&none>;
+            key-positions = <27 28 29>;
         };
     };
 
@@ -236,14 +241,14 @@
             label = "OPTION_RIGHTARROW";
         };
 
-        option_delete: option_delete {
+        option_bckspc: option_delete {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
-                <&kp DEL>,
+                <&kp BACKSPACE>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
 
@@ -262,6 +267,13 @@
                 <&kp LEFT_ALT &kp LEFT_SHIFT>;
 
             label = "SHIFT_OPTION_DOWNARROW_BCKSPC";
+        };
+
+        phone: phone {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_6 &kp NUMBER_1 &kp N7 &kp N8 &kp NUMBER_1 &kp N7 &kp N8 &kp NUMBER_4 &kp N5 &kp NUMBER_3>;
+            label = "PHONE";
         };
     };
 
@@ -340,7 +352,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-             &trans       &bt BT_CLR   &out OUT_TOG  &trans  &trans         &trans      &kp F7             &kp F8  &kp F9  &kp F12
+             &trans       &bt BT_CLR   &out OUT_TOG  &trans  &trans         &trans      &kp F7             &kp F8  &phone  &kp F12
              &bootloader  &screenshot  &kp A         &trans  &trans         &trans      &icloudmail_macro  &kp F5  &kp F6  &kp F11
 &bootloader  &sys_reset   &bt BT_PRV   &bt BT_NXT    &trans  &kp C_RESET    &sys_reset  &kp F1             &kp F2  &kp F3  &kp F10  &trans
                                        &trans        &trans  &trans         &trans      &trans             &trans
