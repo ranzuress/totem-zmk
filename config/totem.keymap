@@ -80,7 +80,7 @@
         };
 
         del_word {
-            bindings = <&option_bckspc>;
+            bindings = <&option_del>;
             key-positions = <18 17 37>;
         };
 
@@ -230,14 +230,14 @@
             label = "OPTION_RIGHTARROW";
         };
 
-        option_bckspc: option_delete {
+        option_del: option_delete {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
-                <&kp BACKSPACE>,
+                <&kp DEL>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
 
