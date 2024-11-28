@@ -66,7 +66,7 @@
 
         bckspc_word {
             bindings = <&option_backspace>;
-            key-positions = <16 36 17>;
+            key-positions = <16 36>;
         };
 
         move_end_paragraph {
@@ -81,7 +81,7 @@
 
         del_word {
             bindings = <&option_del>;
-            key-positions = <18 17 37>;
+            key-positions = <18 37>;
         };
 
         highlight_end_paragraph {
