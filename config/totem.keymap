@@ -93,6 +93,11 @@
             bindings = <&tog 4>;
             key-positions = <13 12 11 10>;
         };
+
+        enie {
+            bindings = <&enie>;
+            key-positions = <30 29>;
+        };
     };
 
     macros {
@@ -270,6 +275,20 @@
             #binding-cells = <0>;
             bindings = <&kp R &kp U &kp B &kp E &kp N &kp UNDERSCORE &kp A &kp N &kp Z &kp U &kp R &kp E &kp S &kp AT_SIGN &kp H &kp K &kp S &kp PERIOD &kp H &kp A &kp R &kp V &kp A &kp R &kp D &kp PERIOD &kp E &kp D &kp U>;
             label = "HKS_EMAIL";
+        };
+
+        enie: enie {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(SPACE)>,
+                <&macro_tap>,
+                <&kp SEMICOLON>,
+                <&macro_press>,
+                <&kp LC(SPACE)>;
+
+            label = "ENIE";
         };
     };
 
