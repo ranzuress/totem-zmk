@@ -41,7 +41,7 @@
         tog_fast {
             timeout-ms = <100>;
             key-positions = <11 12 13>;
-            bindings = <&tog 3>;
+            bindings = <&tog 1>;
         };
 
         highlight_prev_word {
@@ -90,7 +90,7 @@
         };
 
         tog_4 {
-            bindings = <&tog 4>;
+            bindings = <&tog 0>;
             key-positions = <13 12 11 10>;
         };
 
@@ -317,7 +317,17 @@
            &mt EXCLAMATION Q  &mt AT_SIGN W       &mt HASH D      &mt DOLLAR R    &mt PERCENT F                 &mt AMPERSAND J               &mt C_VOLUME_DOWN Y  &mt C_VOLUME_UP U   &mt C_NEXT P         &mt MINUS QUESTION
            &mt LEFT_SHIFT A   &mt LEFT_CONTROL S  &mt LEFT_ALT E  &mt LEFT_GUI T  &mt LG(RIGHT_ARROW) G         &mt RG(LEFT_ARROW) H          &mt RIGHT_GUI I      &mt RIGHT_ALT N     &mt RIGHT_CONTROL L  &mt RIGHT_SHIFT O
 &kp LA(E)  &mt LG(Z) Z        &mt LG(X) X         &mt LG(C) C     &mt LG(V) V     &mt LEFT_PARENTHESIS COMMA    &mt RIGHT_PARENTHESIS PERIOD  &mt PAGE_UP B        &mt C_PLAY_PAUSE M  &mt PAGE_DOWN K      &mt RG(LEFT_BRACKET) SEMICOLON  &mt RG(RIGHT_BRACKET) APOSTROPHE
-                                                  &tog 1          &lt 1 SPACE     &mt LA(LEFT_CONTROL) TAB      &mt RG(RS(NUMBER_5)) RET      &lt 1 BACKSPACE      &lt 2 DELETE
+                                                  &tog 2          &lt 2 SPACE     &mt LA(LEFT_CONTROL) TAB      &mt RG(RS(NUMBER_5)) RET      &lt 2 BACKSPACE      &lt 3 DELETE
+            >;
+        };
+
+        safe_fasttyping {
+            label = "FAST";
+            bindings = <
+           &mt EXCLAMATION Q  &mt AT_SIGN W  &mt HASH D   &mt DOLLAR R  &mt PERCENT F                 &mt AMPERSAND J               &kp Y            &kp U         &kp P            &mt MINUS QUESTION
+           &mt LEFT_SHIFT A   &kp S          &kp E        &kp T         &mt LG(RIGHT_ARROW) G         &mt RG(LEFT_ARROW) H          &kp I            &kp N         &kp L            &mt RIGHT_SHIFT O
+&kp LA(E)  &mt LG(Z) Z        &mt LG(X) X    &mt LG(C) C  &mt LG(V) V   &mt LEFT_PARENTHESIS COMMA    &mt RIGHT_PARENTHESIS PERIOD  &mt PAGE_UP B    &kp M         &mt PAGE_DOWN K  &mt LEFT_BRACKET SEMICOLON  &mt RIGHT_BRACKET APOSTROPHE
+                                             &to 0        &lt 2 SPACE   &mt LC(LEFT_ALT) TAB          &mt RG(RS(NUMBER_5)) RET      &lt 2 BACKSPACE  &lt 3 DELETE
             >;
         };
 
@@ -338,7 +348,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-             &mt TILDE F2        &mt A NUMBER_9      &mt A NUMBER_8         &kp N7                 &mt LBRC F4           &mt RBRC F9                 &mt C_VOLUME_DOWN SLASH       &mt C_VOLUME_UP UP_ARROW    &kp MINUS                      &kp PLUS
+             &mt TILDE F2        &mt A NUMBER_9      &mt A NUMBER_8         &kp N7                 &mt LBRC F4           &mt RBRC F9                 &mt C_VOLUME_DOWN SLASH       &kp UP_ARROW                &kp MINUS                      &kp PLUS
              &mt LSHFT NUMBER_0  &mt LCTRL NUMBER_6  &mt LEFT_ALT NUMBER_5  &mt LEFT_GUI NUMBER_4  &mt LEFT_BRACKET A    &mt RIGHT_BRACKET ASTERISK  &mt RIGHT_GUI LEFT_ARROW      &mt RIGHT_ALT DOWN_ARROW    &mt RIGHT_CONTROL RIGHT_ARROW  &mt RIGHT_SHIFT EQUAL
 &bootloader  &mt LG(Z) A         &mt LG(X) NUMBER_3  &mt LG(C) NUMBER_2     &mt LG(V) NUMBER_1     &mt LPAR PERIOD       &mt RPAR COMMA              &mt PAGE_UP C_BRIGHTNESS_DEC  &mt KP_N2 C_BRIGHTNESS_INC  &mt PAGE_DOWN C_PREVIOUS       &mt LEFT_BRACKET SEMICOLON  &bootloader
                                                      &trans                 &trans                 &trans                &trans                      &trans                        &trans
@@ -366,40 +376,6 @@
              &bootloader   &bt BT_CLR_ALL  &kp A         &trans        &bt BT_CLR_ALL    &hks_email  &icloudmail_macro  &kp F5  &kp F6  &kp F11
 &bootloader  &sys_reset    &bt BT_PRV      &bt BT_NXT    &trans        &kp C_RESET       &sys_reset  &kp F1             &kp F2  &kp F3  &kp F10  &soft_off
                                            &trans        &trans        &trans            &trans      &trans             &trans
-            >;
-        };
-
-        safe_fasttyping {
-            label = "FAST";
-            bindings = <
-           &mt EXCLAMATION Q  &mt AT_SIGN W  &mt HASH D   &mt DOLLAR R  &mt PERCENT F                 &mt AMPERSAND J               &kp Y            &kp U         &kp P            &mt MINUS QUESTION
-           &mt LEFT_SHIFT A   &kp S          &kp E        &kp T         &mt LG(RIGHT_ARROW) G         &mt RG(LEFT_ARROW) H          &kp I            &kp N         &kp L            &mt RIGHT_SHIFT O
-&kp LA(E)  &mt LG(Z) Z        &mt LG(X) X    &mt LG(C) C  &mt LG(V) V   &mt LEFT_PARENTHESIS COMMA    &mt RIGHT_PARENTHESIS PERIOD  &mt PAGE_UP B    &kp M         &mt PAGE_DOWN K  &mt LEFT_BRACKET SEMICOLON  &mt RIGHT_BRACKET APOSTROPHE
-                                             &to 0        &lt 1 SPACE   &mt LC(LEFT_ALT) TAB          &mt RG(RS(NUMBER_5)) RET      &lt 1 BACKSPACE  &lt 2 DELETE
-            >;
-        };
-
-        tvp2_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "TVP 2";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃ SOLO      ┃ TOGGLE IN ┃ RESET ROT ┃ TOGGLE OUT┃ TAKE SNAP ┃   ┃           ┃           ┃           ┃           ┃           ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ ---       ┃ LAST KEY  ┃ NEW KEY   ┃ NEXT KEY  ┃ ENTER     ┃   ┃           ┃           ┃           ┃           ┃           ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃ FULLSCR   ┃ CPY2BRUSH ┃ DEL HEAD  ┃ PSTinPLACE┃ BOOK MARK ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃ REDO/SAV1 ┃TRANS/WARP ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &kp LC(F18)  &kp LS(I)     &kp LS(HOME)  &kp LS(O)      &kp LS(F)      &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &trans       &kp LS(LEFT)  &kp LC(F17)   &kp LS(RIGHT)  &kp RET        &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &kp J        &kp LS(C)     &kp LC(F16)   &kp LS(V)      &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                   &trans        &kp LC(F12)    &kp LC(F11)    &trans  &trans  &trans
             >;
         };
     };
