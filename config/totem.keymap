@@ -348,7 +348,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-             &mt TILDE F2        &mt A NUMBER_9      &mt A NUMBER_8         &kp N7                 &mt LBRC F4           &mt RBRC F9                 &mt C_VOLUME_DOWN SLASH       &kp UP_ARROW                &kp MINUS                      &kp PLUS
+             &mt TILDE F2        &mt A NUMBER_9      &mt A NUMBER_8         &kp N7                 &mt LBRC F4           &mt RBRC F9                 &mt C_VOLUME_DOWN SLASH       &mt UP_ARROW CARET          &kp PLUS                       &kp MINUS
              &mt LSHFT NUMBER_0  &mt LCTRL NUMBER_6  &mt LEFT_ALT NUMBER_5  &mt LEFT_GUI NUMBER_4  &mt LEFT_BRACKET A    &mt RIGHT_BRACKET ASTERISK  &mt RIGHT_GUI LEFT_ARROW      &mt RIGHT_ALT DOWN_ARROW    &mt RIGHT_CONTROL RIGHT_ARROW  &mt RIGHT_SHIFT EQUAL
 &bootloader  &mt LG(Z) A         &mt LG(X) NUMBER_3  &mt LG(C) NUMBER_2     &mt LG(V) NUMBER_1     &mt LPAR PERIOD       &mt RPAR COMMA              &mt PAGE_UP C_BRIGHTNESS_DEC  &mt KP_N2 C_BRIGHTNESS_INC  &mt PAGE_DOWN C_PREVIOUS       &mt LEFT_BRACKET SEMICOLON  &bootloader
                                                      &trans                 &lt 0 SPACE            &trans                &trans                      &lt 0 BACKSPACE               &trans
