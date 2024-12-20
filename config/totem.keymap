@@ -348,10 +348,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-             &mt TILDE F2        &mt A NUMBER_9      &mt A NUMBER_8         &kp N7                 &mt LBRC F4           &mt RBRC F9                 &mt C_VOLUME_DOWN SLASH       &mt UP_ARROW CARET          &kp PLUS                       &kp MINUS
-             &mt LSHFT NUMBER_0  &mt LCTRL NUMBER_6  &mt LEFT_ALT NUMBER_5  &mt LEFT_GUI NUMBER_4  &mt LEFT_BRACKET A    &mt RIGHT_BRACKET ASTERISK  &mt RIGHT_GUI LEFT_ARROW      &mt RIGHT_ALT DOWN_ARROW    &mt RIGHT_CONTROL RIGHT_ARROW  &mt RIGHT_SHIFT EQUAL
-&bootloader  &mt LG(Z) A         &mt LG(X) NUMBER_3  &mt LG(C) NUMBER_2     &mt LG(V) NUMBER_1     &mt LPAR PERIOD       &mt RPAR COMMA              &mt PAGE_UP C_BRIGHTNESS_DEC  &mt KP_N2 C_BRIGHTNESS_INC  &mt PAGE_DOWN C_PREVIOUS       &mt LEFT_BRACKET SEMICOLON  &bootloader
-                                                     &trans                 &lt 0 SPACE            &trans                &trans                      &lt 0 BACKSPACE               &trans
+        &mt TILDE F2        &mt A NUMBER_9      &mt A NUMBER_8         &kp N7                 &mt LBRC F4           &mt RBRC F9                 &mt C_VOLUME_DOWN SLASH       &mt UP_ARROW CARET          &kp PLUS                       &kp MINUS
+        &mt LSHFT NUMBER_0  &mt LCTRL NUMBER_6  &mt LEFT_ALT NUMBER_5  &mt LEFT_GUI NUMBER_4  &mt LEFT_BRACKET A    &mt RIGHT_BRACKET ASTERISK  &mt RIGHT_GUI LEFT_ARROW      &mt RIGHT_ALT DOWN_ARROW    &mt RIGHT_CONTROL RIGHT_ARROW  &mt RIGHT_SHIFT EQUAL
+&tog 3  &mt LG(Z) A         &mt LG(X) NUMBER_3  &mt LG(C) NUMBER_2     &mt LG(V) NUMBER_1     &mt LPAR PERIOD       &mt RPAR COMMA              &mt PAGE_UP C_BRIGHTNESS_DEC  &mt KP_N2 C_BRIGHTNESS_INC  &mt PAGE_DOWN C_PREVIOUS       &mt LEFT_BRACKET SEMICOLON  &bootloader
+                                                &trans                 &lt 0 SPACE            &trans                &trans                      &lt 0 BACKSPACE               &trans
             >;
         };
 
@@ -372,10 +372,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-             &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans      &kp F7             &kp F8  &phone  &kp F12
-             &bootloader   &bt BT_CLR_ALL  &kp A         &trans        &bt BT_CLR_ALL    &hks_email  &icloudmail_macro  &kp F5  &kp F6  &kp F11
-&bootloader  &sys_reset    &bt BT_PRV      &bt BT_NXT    &trans        &kp C_RESET       &sys_reset  &kp F1             &kp F2  &kp F3  &kp F10  &soft_off
-                                           &trans        &trans        &trans            &trans      &trans             &trans
+        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans      &kp F7             &kp F8  &phone  &kp F12
+        &bootloader   &bt BT_CLR_ALL  &kp A         &trans        &bt BT_CLR_ALL    &hks_email  &icloudmail_macro  &kp F5  &kp F6  &kp F11
+&trans  &sys_reset    &bt BT_PRV      &bt BT_NXT    &trans        &kp C_RESET       &sys_reset  &kp F1             &kp F2  &kp F3  &kp F10  &soft_off
+                                      &to 0         &trans        &trans            &trans      &trans             &trans
             >;
         };
     };
