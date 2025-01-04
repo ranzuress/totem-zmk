@@ -98,6 +98,16 @@
             bindings = <&enie>;
             key-positions = <30 29>;
         };
+
+        tab_left {
+            bindings = <&cmd_shft_left>;
+            key-positions = <33 11 12>;
+        };
+
+        tab_right {
+            bindings = <&cmd_shft_right>;
+            key-positions = <33 13 12>;
+        };
     };
 
     macros {
@@ -289,6 +299,34 @@
                 <&kp LC(SPACE)>;
 
             label = "ENIE";
+        };
+
+        cmd_shft_left: cmd_shft_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_COMMAND &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND &kp LEFT_SHIFT>;
+
+            label = "CMD_SHFT_LEFT";
+        };
+
+        cmd_shft_right: cmd_shft_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_COMMAND &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND &kp LEFT_SHIFT>;
+
+            label = "CMD_SHFT_RIGHT";
         };
     };
 
